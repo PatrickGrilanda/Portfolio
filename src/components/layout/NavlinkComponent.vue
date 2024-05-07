@@ -18,15 +18,15 @@ defineProps({
   },
   iconPosition: {
     type: String,
-    default: "",
+    default: "before",
   },
 });
 </script>
 
 <template>
-    <router-link :class="class" :to="link">
-        <v-icon v-if="icon && iconPosition == 'before'" :name="icon"></v-icon>
-            {{ name }}
-        <v-icon v-if="icon && iconPosition == 'after'"></v-icon>
-    </router-link>
+  <router-link :class="class" :to="link">
+    <v-icon v-if="icon && iconPosition == 'before'" :name="icon"></v-icon>
+    {{ name }}
+    <v-icon v-if="icon && iconPosition == 'after'"></v-icon>
+  </router-link>
 </template>
